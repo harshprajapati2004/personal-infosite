@@ -7,6 +7,14 @@
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
 }
+body.dark
+{    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+
+}
 body
 {
     line-height: 1.5;
@@ -157,19 +165,20 @@ ul
     font-size: 30px;
     text-transform: capitalize;
 }
-.aside  .logo
+.aside  .logo 
 {
-    color: var(--text-black-900);
-    font-weight: 700;
+    color: var(--skin-color);
+    font-weight: 600;
     padding: 15px 20px;
     font-size: 30px;
-    letter-spacing: 5px;   
+    letter-spacing: 2px;   
     position: absolute;    
 }
 .aside .logo a span
 {
     font-family: 'Clicker Script', cursive;
-    font-size: 40px;
+    font-size: 22px;
+    color: var(--skin-color); 
 }
 .aside .logo a::before
 {
@@ -249,8 +258,22 @@ ul
     font-weight: 600;
     display: block;
     border-bottom:  1px  solid var(--bg-black-50);
-    color: var(--text-black-900);
+    color: var(--skin-color);
     padding: 5px 15px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Add transition for smooth zoom and color change */
+}
+.aside .nav li a:hover {
+    transform: scale(1.3); /* Scale the entire link (icon + text) to 1.1 times its original size */
+    color: var(--skin-color); /* Keep the color change smooth */
+}
+
+.aside .nav li a i {
+    margin-right: 15px;
+    transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+}
+
+.aside .nav li a:hover i {
+    transform: scale(1.3); /* Scale the icon to 1.2 times its original size on hover */
 }
 .aside .nav li a.active
 {
@@ -731,7 +754,7 @@ h3.my-profession span {
     height: 50px;
     padding: 0 50px;
 }
-@media (max-width:119px)
+@media  (max-width:1199px)
 {
     .aside
     {
@@ -741,14 +764,15 @@ h3.my-profession span {
     {
         padding-left: 0;
     }
-    .about .about-content .personal-info .info-item p span
-    {
-        display: block;
-        margin-left: 0;
-    }
 }
-@media (max-width:991px)
-{   .contact .contact-info-item,
+.about .about-content .personal-info .info-item p span
+{
+    display: block;
+    margin-left: 0;
+}
+@media  (max-width:991px)
+{
+    .contact .contact-info-item,
     .portfolio .portfolio-item,
     .service .service-item
     {
@@ -766,7 +790,8 @@ h3.my-profession span {
     }
 }
 @media (max-width:767px)
-{   .contact .contact-form .col-6,
+{
+    .contact .contact-form .col-6,
     .contact .contact-info-item,
     .portfolio .portfolio-item,
     .service .service-item,
@@ -777,8 +802,5 @@ h3.my-profession span {
     {
         flex: 0 0 100%;
         max-width: 100%;
-
     }
 }
-
-

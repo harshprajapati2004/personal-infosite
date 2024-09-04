@@ -831,43 +831,42 @@ h3.my-profession span {
     height: 50px;
     padding: 0 50px;
 }
-@media  (max-width:1199px)
-{
-    .aside
-    {
+/* Global box-sizing rule to prevent width issues */
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 1199px) {
+    .aside {
         left: -345px;
     }
-    .main-content
-    {
+    .main-content {
         padding-left: 0;
     }
 }
-.about .about-content .personal-info .info-item p span
-{
+
+.about .about-content .personal-info .info-item p span {
     display: block;
     margin-left: 0;
 }
-@media  (max-width:991px)
-{
+
+@media (max-width: 991px) {
     .contact .contact-info-item,
     .portfolio .portfolio-item,
-    .service .service-item
-    {
+    .service .service-item {
         flex: 0 0 50%;
         max-width: 50%;
     }
-    .home .home-info
-    {
+    .home .home-info {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .home .home-img
-    {
+    .home .home-img {
         display: none;
     }
 }
-@media (max-width:767px)
-{
+
+@media (max-width: 767px) {
     .contact .contact-form .col-6,
     .contact .contact-info-item,
     .portfolio .portfolio-item,
@@ -875,9 +874,14 @@ h3.my-profession span {
     .about .about-content .experience,
     .about .about-content .education,
     .about .about-content .skills,
-    .about .about-content .personal-info
-    {
+    .about .about-content .personal-info {
         flex: 0 0 100%;
         max-width: 100%;
     }
 }
+
+/* Additional rule to prevent horizontal overflow */
+html, body {
+    overflow-x: hidden;
+}
+

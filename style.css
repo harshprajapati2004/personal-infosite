@@ -483,8 +483,7 @@ h3.my-profession span {
     font-weight: 400;
     line-height: 40px;
 }
-.about .about-content .education,
-.about  .about-content .experience
+.about .about-content .education
 {
     flex: 0 0 50%;
     max-width: 50%;
@@ -568,6 +567,84 @@ h3.my-profession span {
     text-align: justify;
     color: var(--text-black-700);
 }
+.about  .about-content .experience
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+   /* background-color: red; */
+}
+.fresher-text {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.fresher-text h1 {
+    font-size: 48px;
+    line-height: 2.1;
+    color: var(--text-black-900)
+}
+/* Add dark shadow with animation */
+/* Container to hide overflow */
+.running-animation-container {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid black; /* Optional: to simulate a typing cursor */
+    white-space: nowrap;
+}
+
+/* Container to hide overflow */
+.running-animation-container {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid black; /* Optional: to simulate a typing cursor */
+    white-space: nowrap;
+}
+
+/* Container to hide overflow */
+.running-animation-container {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Container to hide overflow */
+.running-animation-container {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Writing and erasing animation */
+.running-animation {
+    display: inline-block;
+    border-right: 2px solid black; /* Simulate a typing cursor */
+    animation: typing 4s steps(8, end), erasing 4.5s steps(8, end) 2.5s;
+    animation-iteration-count: infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 8ch; /* Adjust this value to match the character count of "Running..." */
+    }
+}
+
+/* Instant erasing animation and hiding the vertical bar */
+@keyframes erasing {
+    0% {
+        width: 8ch;
+        border-right-color: black; /* Vertical bar visible */
+    }
+    100% {
+        width: 0;
+        border-right-color: transparent; /* Hide vertical bar */
+    }
+}
+
 /* Service */
 .service .container{
     padding-bottom: 40px;
